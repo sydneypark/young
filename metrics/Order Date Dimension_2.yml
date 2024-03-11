@@ -1,0 +1,13 @@
+unique_name: Order Date Dimension_2
+object_type: metric
+label: Sales Amount - First Value
+calculation_method: sum
+semi_additive:
+  position: first
+  dimension: Date Dimension
+  hierarchy: Date Month Hierarchy
+  level: DayMonth
+  role_plays:
+    - "Order {0}"
+dataset: factinternetsales
+column: salesamount
