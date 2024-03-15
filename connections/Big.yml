@@ -1,0 +1,6 @@
+unique_name: Big
+label: Big
+object_type: connection
+as_connection: Big
+database: ci-pipeline-199520
+schema: 1young

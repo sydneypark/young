@@ -1,7 +1,7 @@
 unique_name: dimproduct
 object_type: dataset
 label: dimproduct
-connection_id: con1
+connection_id: Snow
 table: dimproduct
 
 columns:
