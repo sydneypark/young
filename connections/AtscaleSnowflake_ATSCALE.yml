@@ -1,6 +1,0 @@
-unique_name: AtscaleSnowflake_ATSCALE
-label: AtscaleSnowflake_ATSCALE
-object_type: connection
-as_connection: AtscaleSnowflake
-schema: 1young
-database: QT
