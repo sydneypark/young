@@ -1,7 +1,7 @@
 unique_name: Prod_Measure
 object_type: dataset
 label: Prod_Measure
-connection_id: Postgres
+connection_id: Snow
 sql: |-
   select productkey, englishproductname, listprice from atscale_data.dimproduct
   where listprice is not null
