@@ -1,12 +1,12 @@
 unique_name: dimcustomer
 object_type: dataset
 label: dimcustomer
-connection_id: Snow
+connection_id: Postgres
 table: dimcustomer
 
 columns:
   - name: customerkey
-    data_type: "decimal(38,0)"
+    data_type: int
   - name: datefirstpurchase
     data_type: string
   - name: firstname
@@ -16,7 +16,7 @@ columns:
   - name: gender
     data_type: string
   - name: geographykey
-    data_type: "decimal(38,0)"
+    data_type: int
   - name: lastname
     data_type: string
   - name: occupation

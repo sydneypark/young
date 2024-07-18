@@ -1,0 +1,7 @@
+unique_name: Product List Price
+object_type: metric
+label: Product List Price
+calculation_method: sum
+unrelated_dimensions_handling: repeat
+dataset: Prod_Measure
+column: listprice

@@ -1,0 +1,5 @@
+unique_name: test2
+object_type: metric_calc
+label: test2
+expression: "([Product Dimension].[Product Dimension].[Product Name].&[230],[Measures].[Product\
+  \ List Price])"

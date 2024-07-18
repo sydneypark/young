@@ -1,0 +1,8 @@
+unique_name: test4
+object_type: metric_calc
+label: test4
+expression: |-
+  SUM({ParallelPeriod([Order Date Dimension].[Order Day_Date].[Order Day_Date], 365, [Order Date Dimension].[Order Day_Date].CurrentMember)
+              :
+              ParallelPeriod([Order Date Dimension].[Order Day_Date].[Order Day_Date], 275, [Order Date Dimension].[Order Day_Date].CurrentMember)},
+             [Measures].[salesamount1])

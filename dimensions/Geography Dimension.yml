@@ -78,7 +78,6 @@ level_attributes:
 
   - unique_name: GeoKeyCity
     label: GeoKey
-    is_hidden: true
     is_unique_key: true
     dataset: dim_geo_city
     name_column: geographykey
@@ -87,7 +86,6 @@ level_attributes:
 
   - unique_name: GeoKeyZip
     label: GeoKey
-    is_hidden: true
     is_unique_key: true
     dataset: dim_geo_postalcode
     name_column: geographykey

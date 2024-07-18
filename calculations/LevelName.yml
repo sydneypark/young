@@ -1,0 +1,4 @@
+unique_name: LevelName
+object_type: metric_calc
+label: LevelName
+expression: "[Order Date Dimension].[Order Date Month Hierarchy].CurrentMember.level.Name"

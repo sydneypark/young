@@ -1,0 +1,6 @@
+unique_name: m_color_count
+object_type: metric
+label: Color Non Distinct Count
+calculation_method: count non-null
+dataset: factinternetsales
+column: color

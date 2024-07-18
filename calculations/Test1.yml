@@ -1,0 +1,4 @@
+unique_name: Test1
+object_type: metric_calc
+label: Test1
+expression: "([Geography Dimension].[Geography City].[CountryCity].&[France],[Measures].[salesamount1])"

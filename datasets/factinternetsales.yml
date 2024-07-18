@@ -1,46 +1,39 @@
 unique_name: factinternetsales
 object_type: dataset
 label: factinternetsales
-connection_id: Snow
+connection_id: Postgres
 table: factinternetsales
 
 columns:
   - name: Calculated Tax
     data_type: double
     sql: salesamount*0.085
-    dialects:
-      - dialect: Snowflake
-        sql: '"salesamount"*0.085'
-      - dialect: Oracle
-        sql: '"salesamount"*0.085'
-      - dialect: Db2
-        sql: '"salesamount"*0.085'
   - name: currencykey
-    data_type: "decimal(38,0)"
+    data_type: int
   - name: customerkey
-    data_type: "decimal(38,0)"
+    data_type: int
   - name: orderdate
     data_type: string
   - name: orderdatekey
-    data_type: "decimal(38,0)"
+    data_type: int
   - name: orderquantity
-    data_type: "decimal(38,0)"
+    data_type: int
   - name: productkey
-    data_type: "decimal(38,0)"
+    data_type: int
   - name: sales_reasons
     data_type: string
   - name: salesamount
-    data_type: double
+    data_type: float
   - name: salesorderlinenumber
-    data_type: "decimal(38,0)"
+    data_type: int
   - name: salesordernumber
     data_type: string
   - name: shipdatekey
-    data_type: "decimal(38,0)"
+    data_type: int
   - name: taxamt
-    data_type: double
+    data_type: float
   - name: unitprice
-    data_type: double
+    data_type: float
   - name: product_info
     map:
       field_terminator: ","

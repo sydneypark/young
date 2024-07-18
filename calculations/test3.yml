@@ -1,0 +1,5 @@
+unique_name: test3
+object_type: metric_calc
+label: test3
+expression: "sum({[Order Date Dimension].[Order Day_Date].CurrentMember.Lag(365):\
+  \ [Order Date Dimension].[Order Day_Date].CurrentMember.Lag(275)},[Measures].[salesamount1])"

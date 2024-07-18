@@ -1,7 +1,7 @@
 unique_name: dim_geo_postalcode
 object_type: dataset
 label: dim_geo_postalcode
-connection_id: Snow
+connection_id: Postgres
 table: dim_geo_postalcode
 
 columns:
@@ -10,6 +10,6 @@ columns:
   - name: countrypostalcode
     data_type: string
   - name: geographykey
-    data_type: "decimal(38,0)"
+    data_type: int
   - name: postalcode
     data_type: string

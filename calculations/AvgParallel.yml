@@ -1,0 +1,10 @@
+unique_name: AvgParallel
+object_type: metric_calc
+label: AvgParallel
+expression: |
+  Avg(
+      ParallelPeriod([Order Date Dimension].[Order Date Month Hierarchy].[Order DayMonth], 365, [Order Date Dimension].[Order Date Month Hierarchy].CurrentMember)
+      :
+      [Order Date Dimension].[Order Date Month Hierarchy].CurrentMember,
+         [Measures].[salesamount1]
+  )

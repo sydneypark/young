@@ -1,0 +1,5 @@
+unique_name: MaxByOrderCurrency
+object_type: metric_calc
+label: MaxByOrderCurrency
+expression: " MAX(DESCENDANTS([Order Dimension].[Order Dimension].currentMember, [Order\
+  \ Dimension].[Order Dimension].[currency], SELF), [Measures].[salesamount1])"

@@ -1,0 +1,8 @@
+unique_name: Desc-Lag
+object_type: metric_calc
+label: Desc-Lag
+expression: |-
+  SUM(
+      DESCENDANTS([Order Date Dimension].[Order Day_Date].CurrentMember.Lag(365), [Order Date Dimension].[Order Day_Date].[Order Day_Date], SELF),
+      [Measures].[salesamount1]
+  )

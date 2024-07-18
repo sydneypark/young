@@ -2,20 +2,28 @@ unique_name: Style Dimension
 object_type: dimension
 label: Style Dimension
 description: Product Style
+is_degenerate: true
+
 hierarchies:
-  - unique_name: Style Hierarchy
+
+  - unique_name: Style
     label: Style
     folder: Product Attributes
+
     levels:
+
       - unique_name: Style
-is_degenerate: true
+
 level_attributes:
+
   - unique_name: Style
     label: Style
     description: Product Style
     dataset: factinternetsales
-    is_hidden: true
+    name_column: style
     key_columns:
       - style
-    name_column: style
-type: standard
+
+modeler_metadata:
+  version: "0"
+  modified: "false"

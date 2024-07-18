@@ -1,0 +1,4 @@
+unique_name: calParalel
+object_type: metric_calc
+label: calParalel
+expression: "[Measures].[AvgParallel]/[Measures].[SumParallel]"

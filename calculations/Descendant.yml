@@ -1,0 +1,5 @@
+unique_name: Descendant
+object_type: metric_calc
+label: Descendant
+expression: "SUM(DESCENDANTS([Order Date Dimension].[Order Day_Date].CurrentMember,\
+  \ [Order Date Dimension].[Order Day_Date].[Order Day_Date], SELF), [Measures].[salesamount1])"

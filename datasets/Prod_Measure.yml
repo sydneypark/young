@@ -1,0 +1,15 @@
+unique_name: Prod_Measure
+object_type: dataset
+label: Prod_Measure
+connection_id: Postgres
+sql: |-
+  select productkey, englishproductname, listprice from atscale_data.dimproduct
+  where listprice is not null
+
+columns:
+  - name: englishproductname
+    data_type: string
+  - name: listprice
+    data_type: float
+  - name: productkey
+    data_type: int

@@ -1,0 +1,12 @@
+unique_name: test5
+object_type: metric_calc
+label: test5
+expression: |2
+     Sum(
+              {
+                  ParallelPeriod([Order Date Dimension].[Order Date Month Hierarchy].[Order YearMonth], 1, [Order Date Dimension].[Order Date Month Hierarchy].CurrentMember)
+                  :
+                  ParallelPeriod([Order Date Dimension].[Order Date Month Hierarchy].[Order DayMonth], -90, ParallelPeriod([Order Date Dimension].[Order Date Month Hierarchy].[Order YearMonth], 1, [Order Date Dimension].[Order Date Month Hierarchy].CurrentMember))
+              },
+              [Measures].[salesamount1]
+          )

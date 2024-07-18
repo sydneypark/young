@@ -1,0 +1,5 @@
+unique_name: Test Color
+object_type: metric_calc
+label: Test Color
+expression: "[Measures].[salesamountAvg1] -[Measures].[salesamount1]"
+format: "$#,##0.00;($#,##0.00)"
