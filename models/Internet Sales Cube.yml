@@ -5,14 +5,14 @@ visible: true
 
 relationships:
 
-  - unique_name: Prod_Measure_Product_Dimension
+  - unique_name: factinternetsales_Customer_Dimension
     from:
-      dataset: Prod_Measure
+      dataset: factinternetsales
       join_columns:
-        - productkey
+        - customerkey
     to:
-      dimension: Product Dimension
-      level: Product Name
+      dimension: Customer Dimension
+      level: Customer Name
 
   - unique_name: factinternetsales_Date_Dimension_Order
     from:
@@ -21,7 +21,7 @@ relationships:
         - orderdatekey
     to:
       dimension: Date Dimension
-      level: DayMonth
+      level: Reporting_Day
     role_play: "Order {0}"
 
   - unique_name: factinternetsales_Date_Dimension_Ship
@@ -31,37 +31,8 @@ relationships:
         - shipdatekey
     to:
       dimension: Date Dimension
-      level: DayMonth
-    role_play: "Ship {0}"
-
-  - unique_name: factinternetsales_Date_Dimension_Order_1
-    from:
-      dataset: factinternetsales
-      join_columns:
-        - orderdatekey
-    to:
-      dimension: Date Dimension
-      level: Reporting_Day
-    role_play: "Order {0}"
-
-  - unique_name: factinternetsales_Date_Dimension_Ship_1
-    from:
-      dataset: factinternetsales
-      join_columns:
-        - shipdatekey
-    to:
-      dimension: Date Dimension
       level: Reporting_Day
     role_play: "Ship {0}"
-
-  - unique_name: factinternetsales_Product_Dimension
-    from:
-      dataset: factinternetsales
-      join_columns:
-        - productkey
-    to:
-      dimension: Product Dimension
-      level: Product Name
 
   - unique_name: factinternetsales_Order_Dimension
     from:
@@ -73,6 +44,35 @@ relationships:
     to:
       dimension: Order Dimension
       level: order_line_item
+
+  - unique_name: factinternetsales_Product_Dimension
+    from:
+      dataset: factinternetsales
+      join_columns:
+        - productkey
+    to:
+      dimension: Product Dimension
+      level: Product Name
+
+  - unique_name: factinternetsales_Date_Dimension_Order_1
+    from:
+      dataset: factinternetsales
+      join_columns:
+        - orderdatekey
+    to:
+      dimension: Date Dimension
+      level: DayMonth
+    role_play: "Order {0}"
+
+  - unique_name: factinternetsales_Date_Dimension_Ship_1
+    from:
+      dataset: factinternetsales
+      join_columns:
+        - shipdatekey
+    to:
+      dimension: Date Dimension
+      level: DayMonth
+    role_play: "Ship {0}"
 
   - unique_name: factinternetsales_Date_Dimension_Order_2
     from:
@@ -94,15 +94,6 @@ relationships:
       level: customday
     role_play: "Ship {0}"
 
-  - unique_name: factinternetsales_Customer_Dimension
-    from:
-      dataset: factinternetsales
-      join_columns:
-        - customerkey
-    to:
-      dimension: Customer Dimension
-      level: Customer Name
-
 dimensions:
   - Color Dimension
   - Size Dimension
@@ -123,8 +114,6 @@ metrics:
   - unique_name: lastproductunitprice
     folder: Product Metrics
 
-  - unique_name: m_color_count
-
   - unique_name: maxOrderDate
     folder: Time Relative
 
@@ -136,8 +125,6 @@ metrics:
 
   - unique_name: orderquantity1
     folder: Sales Metrics
-
-  - unique_name: Product List Price
 
   - unique_name: salesamount1
     folder: Sales Metrics
@@ -171,10 +158,6 @@ metrics:
 
   - unique_name: Average Sold Product per Order
     folder: Time Relative
-
-  - unique_name: AvgParallel
-
-  - unique_name: calParalel
 
   - unique_name: Customer Count-Order CustomPP445-PrevYear
     folder: Time Relative
@@ -229,10 +212,6 @@ metrics:
 
   - unique_name: Customer Count-Order Retail445-YTDPrevYear
     folder: Time Relative
-
-  - unique_name: Desc-Lag
-
-  - unique_name: Descendant
 
   - unique_name: Estimated Customer Count-Order CustomPP445-PrevYear
     folder: Time Relative
@@ -342,8 +321,6 @@ metrics:
   - unique_name: Last Product Unit Price-Order Retail445-YTDPrevYear
     folder: Time Relative
 
-  - unique_name: LevelName
-
   - unique_name: Max Tax Amount-Order CustomPP445-PrevYear
     folder: Time Relative
 
@@ -397,8 +374,6 @@ metrics:
 
   - unique_name: Max Tax Amount-Order Retail445-YTDPrevYear
     folder: Time Relative
-
-  - unique_name: MaxByOrderCurrency
 
   - unique_name: Sales Amount SStdev-Order CustomPP445-PrevYear
     folder: Time Relative
@@ -562,43 +537,7 @@ metrics:
   - unique_name: SoldProductNDC-Order Retail445-YTDPrevYear
     folder: Time Relative
 
-  - unique_name: SumParallel
-
-  - unique_name: Test Color
-
-  - unique_name: Test1
-
-  - unique_name: test2
-
-  - unique_name: test3
-
-  - unique_name: test4
-
-  - unique_name: test5
-
 drillthroughs:
-
-  - unique_name: Shipping Details
-    attributes:
-
-      - name: Size
-        dimension: Size Dimension
-
-      - name: Style
-        dimension: Style Dimension
-
-      - name: Color
-        dimension: Color Dimension
-
-      - name: Customer Name
-        dimension: Customer Dimension
-
-      - name: Product Name
-        dimension: Product Dimension
-
-    metrics:
-      - orderquantity1
-      - salesamount1
 
   - unique_name: Customer Details
     attributes:
@@ -614,6 +553,28 @@ drillthroughs:
 
       - name: Zip Code
         dimension: Geography Dimension
+
+    metrics:
+      - orderquantity1
+      - salesamount1
+
+  - unique_name: Shipping Details
+    attributes:
+
+      - name: Customer Name
+        dimension: Customer Dimension
+
+      - name: Style
+        dimension: Style Dimension
+
+      - name: Product Name
+        dimension: Product Dimension
+
+      - name: Color
+        dimension: Color Dimension
+
+      - name: Size
+        dimension: Size Dimension
 
     metrics:
       - orderquantity1

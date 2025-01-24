@@ -1,2 +1,1 @@
-# atscale-model-template
-Atscale Template
+# salesinsights

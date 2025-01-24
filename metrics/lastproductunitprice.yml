@@ -5,8 +5,7 @@ calculation_method: maximum
 format: "$#,##0.00"
 semi_additive:
   position: last
-  dimension: Product Dimension
-  hierarchy: Product Dimension
-  level: Product Name
+  relationships:
+    - factinternetsales_Product_Dimension
 dataset: factinternetsales
 column: unitprice

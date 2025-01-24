@@ -7,8 +7,8 @@ hierarchies:
 
   - unique_name: Weight
     label: Weight
-    folder: Product Attributes
     filter_empty: "yes"
+    folder: Product Attributes
 
     levels:
 
@@ -19,10 +19,6 @@ level_attributes:
   - unique_name: Weight
     label: Weight
     dataset: factinternetsales
-    name_column: weight
     key_columns:
       - weight
-
-modeler_metadata:
-  version: "0"
-  modified: "false"
+    name_column: weight

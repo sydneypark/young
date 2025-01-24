@@ -20,10 +20,6 @@ level_attributes:
     label: Style
     description: Product Style
     dataset: factinternetsales
-    name_column: style
     key_columns:
       - style
-
-modeler_metadata:
-  version: "0"
-  modified: "false"
+    name_column: style

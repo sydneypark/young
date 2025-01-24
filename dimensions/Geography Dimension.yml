@@ -22,9 +22,9 @@ hierarchies:
           - unique_name: d_city
             label: City
             dataset: dim_geo_city
-            name_column: city
             key_columns:
               - city
+            name_column: city
 
       - unique_name: GeoKeyCity
         is_hidden: true
@@ -44,9 +44,9 @@ hierarchies:
           - unique_name: d_postalcode
             label: Postal Code
             dataset: dim_geo_postalcode
-            name_column: postalcode
             key_columns:
               - postalcode
+            name_column: postalcode
 
       - unique_name: GeoKeyZip
         is_hidden: true
@@ -56,58 +56,58 @@ level_attributes:
   - unique_name: City
     label: City
     dataset: dim_geo_city
-    name_column: citystatekey
     key_columns:
       - statekey
       - city
+    name_column: citystatekey
 
   - unique_name: CountryCity
     label: Country
     is_unique_key: true
     dataset: dim_geo_country
-    name_column: country
     key_columns:
       - country
+    name_column: country
 
   - unique_name: CountryZip
     label: Country
     dataset: dim_geo_country
-    name_column: country
     key_columns:
       - country
+    name_column: country
 
   - unique_name: GeoKeyCity
     label: GeoKey
     is_unique_key: true
     dataset: dim_geo_city
-    name_column: geographykey
     key_columns:
       - geographykey
+    name_column: geographykey
 
   - unique_name: GeoKeyZip
     label: GeoKey
     is_unique_key: true
     dataset: dim_geo_postalcode
-    name_column: geographykey
     key_columns:
       - geographykey
+    name_column: geographykey
 
   - unique_name: State
     label: State
     is_unique_key: true
     dataset: dim_geo_state
-    name_column: state
     key_columns:
       - statekey
+    name_column: state
 
   - unique_name: Zip Code
     label: Zip Code
     is_unique_key: true
     dataset: dim_geo_postalcode
-    name_column: countrypostalcode
     key_columns:
       - country
       - postalcode
+    name_column: countrypostalcode
 
 relationships:
 

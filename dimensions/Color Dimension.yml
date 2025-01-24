@@ -20,10 +20,6 @@ level_attributes:
     label: Color
     description: Product Color
     dataset: factinternetsales
-    name_column: color
     key_columns:
       - color
-
-modeler_metadata:
-  version: "0"
-  modified: "false"
+    name_column: color

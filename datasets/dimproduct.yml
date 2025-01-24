@@ -1,7 +1,7 @@
 unique_name: dimproduct
 object_type: dataset
 label: dimproduct
-connection_id: Snow
+connection_id: BigQuery
 table: dimproduct
 
 columns:
