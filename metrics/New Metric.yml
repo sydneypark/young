@@ -1,0 +1,6 @@
+unique_name: New Metric
+object_type: metric
+label: New Metric
+calculation_method: sum
+column: ''
+dataset: ''
