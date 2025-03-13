@@ -1,0 +1,6 @@
+unique_name: Databricks
+object_type: connection
+label: Databricks
+as_connection: con2 
+database: atscale
+schema: atscaleagg
